@@ -1,0 +1,10 @@
+# To use a group, assign yourself the permission minichat.group.<group>
+# If you have multiple, the first available one will be used.
+# The last one will be used as the "default"
+groups:
+  admin:
+    prefix: "<red>[Admin] "
+    suffix: ": "
+  default:
+    prefix: "%vault_prefix% "
+    suffix: "<reset><white>: "

@@ -1,0 +1,13 @@
+name: MiniChat
+version: '${project.version}'
+main: me.fredthedoggy.minichat.MiniChat
+api-version: 1.17
+prefix: MiniChat
+softdepend: [ PlaceholderAPI ]
+authors: [ Fredthedoggy ]
+description: A dead-simple chat plugin
+commands:
+  minichat: {}
+permissions:
+  minichat.admin:
+    default: op
