@@ -11,9 +11,9 @@ import java.util.Collection;
 public class MessageUtils {
     public static void sendMessage(Collection<? extends Player> players, Player sender, String miniMessage, Component... other) {
         for (Player player : players) {
-            player.sendMessage(appendComponents(MiniMessage.get().parse(PlaceholderManager.parseRelationalPlaceholder(player, sender, PlaceholderManager.parsePlaceholder(sender, miniMessage))), other));
+            player.sendMessage(sender, appendComponents(MiniMessage.get().parse(PlaceholderManager.parseRelationalPlaceholder(player, sender, PlaceholderManager.parsePlaceholder(sender, miniMessage))), other));
         }
-        Bukkit.getConsoleSender().sendMessage(appendComponents(MiniMessage.get().parse(PlaceholderManager.parsePlaceholder(sender, miniMessage)), other));
+        Bukkit.getConsoleSender().sendMessage(sender, appendComponents(MiniMessage.get().parse(PlaceholderManager.parsePlaceholder(sender, miniMessage)), other));
     }
 
     private static Component appendComponents(Component component, Component[] other) {
